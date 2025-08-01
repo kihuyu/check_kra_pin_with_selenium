@@ -9,10 +9,11 @@ import redis
 import re
 import json
 
-geckodriver_path = "/snap/bin/geckodriver"
-service = webdriver.FirefoxService(executable_path=geckodriver_path)
 from PIL import Image
 import pytesseract
+
+geckodriver_path = "/snap/bin/geckodriver"
+service = webdriver.FirefoxService(executable_path=geckodriver_path)
 
 pins_to_check = sys.argv[1].split(',')
 dict_of_pins = dict.fromkeys(pins_to_check, 'Invalid')
